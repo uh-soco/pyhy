@@ -49,5 +49,3 @@ def by_organisation( organisations = [], lang = 'en', academic_year = _guess_stu
         ret += _collect( {'organisation': org, 'studyYear' : academic_year, 'lang' : lang } )
 
     return ret
-
-print( by_organisation( [116738259] ) )
