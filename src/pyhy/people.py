@@ -51,7 +51,16 @@ def _clean_output( results, lang = 'en' ):
 
 def search( search, lang = 'en' ):
     search_results = _collect( {'search': search } )
-    return _clean_output( search_results )[0]
+    search_results = _clean_output( search_results )
+
+    if len( search_results ) == 0:
+        return None
+
+    if len( search_results ) == 1:
+        return search_results[0]
+
+    if len( search_results ) > 1:
+        return search_results
 
 def by_organisation( organisations = [], lang = 'en' ):
 
