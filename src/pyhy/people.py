@@ -1,6 +1,6 @@
 import requests
 
-_API_PATH = 'https://nginx-helsinki-searchapi-master.ch.amazee.io/contacts'
+_API_PATH = 'https://hy-asha-prod.druid.fi/contacts'
 
 def _collect( query ):
 
