@@ -64,6 +64,15 @@ def search( search, lang = 'en' ):
 
 def by_organisation( organisations = [], lang = 'en' ):
 
+    if isinstance( organisations, int ):
+        organisations = [ organisations ]
+
+    if isinstance( organisations, str ):
+        if ',' in organisations:
+            organisations = organisations.split(',')
+        else:
+            organisations = [ organisations ]
+
     ## todo: we should be able to collect them all in one query
 
     ret = []
