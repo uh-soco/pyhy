@@ -30,8 +30,6 @@ def _clean_output( results, lang = 'en' ):
 
         for key, value in item.copy().items():
 
-            print( key )
-
             if key.startswith('@'):
                 del item[key]
 
