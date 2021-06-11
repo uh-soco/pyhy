@@ -1,7 +1,10 @@
 import setuptools
 
-with open("README.md", "r", encoding="utf-8") as fh:
+with open("README.md") as fh:
     long_description = fh.read()
+
+wit open("requirements.txt") as fh:
+    requirements = fh.read().split('\n')
 
 setuptools.setup(
     name="pyhy",
@@ -22,5 +25,6 @@ setuptools.setup(
     ],
     package_dir={"": "src"},
     packages=setuptools.find_packages(where="src"),
-    python_requires=">=3.6",
+    python_requires=">=3.5",
+    install_requires=requirements
 )
