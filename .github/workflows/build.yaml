@@ -31,7 +31,7 @@ jobs:
         with:
           name: pyhy
           path: src/dist
-      -  - name: Publish distribution 📦 to PyPI
+      -  name: Publish distribution 📦 to PyPI
         uses: pypa/gh-action-pypi-publish@master
         with:
           password: ${{ secrets.PYPI_API_TOKEN }}
