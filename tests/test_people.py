@@ -1,7 +1,7 @@
 import unittest
 
 import sys
-sys.path.append('./src/pyhy')
+sys.path.append('./src/py4hy')
 
 import people
 

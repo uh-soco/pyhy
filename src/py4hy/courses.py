@@ -32,8 +32,19 @@ def _guess_study_year():
     else:
         return now.year
 
+def _select_language( courses, lang ):
+    _courses = []
+    for course in courses:
+        for key, value in course.items():
+            if isinstance( value, dict ) and lang in value:
+                course[ key ] = value[ lang ]
+        _courses.append( course )
+    return _courses
+
+
 def search( search = '', lang = 'en', academic_year = _guess_study_year() ):
-    return _collect( {'searchText': search, 'studyYear' : academic_year, 'lang' : lang } )
+    courses = _collect( {'searchText': search, 'studyYear' : academic_year, 'lang' : lang } )
+    return _select_language( courses, lang )
 
 def by_organisation( organisations = [], lang = 'en', academic_year = _guess_study_year() ):
     ## todo: can requests multiple organisations at the same time, but not easy to plug in with the collect implementation

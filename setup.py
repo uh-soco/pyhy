@@ -4,7 +4,7 @@ with open("README.md") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="pyhy",
+    name="py4hy",
     version="0.0.1",
     author="Matti Nelimarkka",
     author_email="matti.nelimarkka@helsinki.fi",
