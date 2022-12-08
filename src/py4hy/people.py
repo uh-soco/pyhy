@@ -1,6 +1,6 @@
 import requests
 
-_API_PATH = 'https://hy-asha-prod.druid.fi/contacts'
+_API_PATH = 'https://www.helsinki.fi/en/api/people/contacts'
 
 def _collect( query ):
 
@@ -33,9 +33,11 @@ def _clean_output( results, lang = 'en' ):
             if key.startswith('@'):
                 del item[key]
 
-            ## todo: clean json more
             if isinstance( value, list ):
-                item[key] = _clean_output( value, lang = lang )
+                pass
+                ## todo: automatic parsing for hydra?
+                ## todo: clean json more, now this works good enough
+                ## item[key] = _clean_output( value, lang = lang )
 
             if isinstance( value, dict ):
 
