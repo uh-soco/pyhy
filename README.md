@@ -7,7 +7,7 @@ Collection of tools to collect information from various University of Helsinki d
 This pulls data from the [People Finder](https://www.helsinki.fi/en/people/people-finder).
 
 ```
-from pyhy import people
+from py4hy import people
 matti = people.search('Matti Nelimarkka')
 print( "Call Matti", matti['mobileNumber'] )
 print( "Matti works at", matti['researchOrganization'][-1]['name'])
