@@ -81,7 +81,9 @@ def by_organisation( organisations = [], lang = 'en' ):
 
     for org in organisations:
 
-        query = { 'organizations.id[]' : org }
+        print( org )
+
+        query = { 'researchOrganizations.id[]' : org }
         ret += _collect( query )
 
     return _clean_output( ret )
