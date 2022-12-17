@@ -1,7 +1,7 @@
 import requests
 import datetime
 
-_API_PATH = 'https://studies.helsinki.fi/api/search'
+_API_PATH = 'https://studies.helsinki.fi/api/search/courses'
 
 def _collect( query ):
 
